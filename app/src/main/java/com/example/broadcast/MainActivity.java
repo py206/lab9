@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     btn_start.setText("開始");
                     Toast.makeText(MainActivity.this,"計時暫停",Toast.LENGTH_SHORT).show();
                 }
+                startService(new Intent(MainActivity.this,MyService.class).putExtra("flag",flag));
             }
         });
     }
